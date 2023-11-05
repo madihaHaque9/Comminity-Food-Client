@@ -1,6 +1,6 @@
 
 import { Link } from 'react-router-dom';
-import logo from '../../assets/logo.png'
+import logo from '../Navbar/logo-fotor-bg-remover-2023110523123.png'
 const Navbar = () => {
     const navItems=<>
     <li><Link to='/'>Home</Link></li>
@@ -12,7 +12,7 @@ const Navbar = () => {
    
     </>
     return (
-        <div className="navbar bg-base-100 h-28 mb-4">
+        <div className="navbar bg-orange-400 h-28 mb-4">
   <div className="navbar-start">
     <div className="dropdown">
       <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -28,7 +28,7 @@ const Navbar = () => {
     </Link>
     </div>
   </div>
-  <div className="navbar-center hidden lg:flex">
+  <div className="navbar-center hidden lg:flex text-white">
     <ul className="menu menu-horizontal px-1">
      {navItems}
     </ul>

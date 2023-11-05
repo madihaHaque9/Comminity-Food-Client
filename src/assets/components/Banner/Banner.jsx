@@ -1,8 +1,9 @@
 import banner from '../Banner/Bunnner.jpg'
-
+import AnimatedPage from '../../../AnimatedPage';
 const Banner = () => {
     return (
-//        
+//      
+<AnimatedPage>
 <div className="hero min-h-screen bg-green-400">
   <div className="hero-content flex-col lg:flex-row-reverse ">
     <img src={banner} className="max-w-sm rounded-lg shadow-2xl" />
@@ -14,6 +15,8 @@ const Banner = () => {
     </div>
   </div>
 </div>
+</AnimatedPage>  
+
     );
 };
 
