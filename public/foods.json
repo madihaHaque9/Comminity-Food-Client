@@ -1,0 +1,81 @@
+[
+    {
+      "_id": "1",
+      "foodImage": "https://i.imgur.com/HhzeRRU.jpg",
+      "foodName": "Cheeseburger",
+      
+        "donatorImage": "donator1_image.jpg",
+        "donatorName": "John Doe"
+      ,
+      "foodQuantity": "2",
+      "pickupLocation": "123 Oak Street, Cityville",
+      "expiredDate": "2023-11-10 ",
+      "additionalNotes": "Includes fries and ketchup."
+    },
+    {
+      "_id": "2",
+      "foodImage": "https://i.imgur.com/VzesOtm.jpg",
+      "foodName": "Margherita Pizza",
+
+        "donatorImage": "donator2_image.jpg",
+        "donatorName": "Jane Smith"
+      ,
+      "foodQuantity": "3",
+      "pickupLocation": "456 Elm Avenue, Townsville",
+      "expiredDate": "2023-11-12 ",
+      "additionalNotes": "Vegetarian option."
+    },
+    {
+      "_id": "3",
+      "foodImage": "https://i.imgur.com/VThXEZF.jpg",
+      "foodName": "Caesar Salad",
+   
+        "donatorImage": "donator3_image.jpg",
+        "donatorName": "Maria Lopez"
+      ,
+      "foodQuantity": "2",
+      "pickupLocation": "789 Maple Road, Villagetown",
+      "expiredDate": "2023-11-11 ",
+      "additionalNotes": "Croutons and dressing included."
+    },
+    {
+      "_id": "4",
+      "foodImage": "https://i.imgur.com/1ExBSz6.jpg",
+      "foodName": "Sushi Platter",
+   
+        "donatorImage": "donator4_image.jpg",
+        "donatorName": "Michael Chang"
+      ,
+      "foodQuantity": "4",
+      "pickupLocation": "101 Pine Lane, Sushiville",
+      "expiredDate": "2023-11-13 ",
+      "additionalNotes": "Freshly made with assorted sushi rolls."
+    },
+    {
+      "_id": "5",
+      "foodImage": "https://i.imgur.com/0ICGWm3.jpg",
+      "foodName": "Pasta Carbonara",
+     
+        "donatorImage": "donator5_image.jpg",
+        "donatorName": "Sophia Martin"
+      ,
+      "foodQuantity": "3",
+      "pickupLocation": "222 Oak Lane, Pastatown",
+      "expiredDate": "2023-11-14 ",
+      "additionalNotes": "Creamy sauce with bacon and parmesan."
+    },
+    {
+      "_id": "6",
+      "foodImage": "https://i.imgur.com/HRPup4M.jpg",
+      "foodName": "Chocolate Brownie",
+    
+        "donatorImage": "donator6_image.jpg",
+        "donatorName": "David Wilson"
+      ,
+      "foodQuantity": "6",
+      "pickupLocation": "333 Pine Street, Sweetville",
+      "expiredDate": "2023-11-15 ",
+      "additionalNotes": "Moist and rich chocolate brownies."
+    }
+  ]
+  

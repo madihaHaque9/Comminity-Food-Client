@@ -1,9 +1,13 @@
+import Banner from "../../assets/components/Banner/Banner";
+import FoodCard from "../../assets/components/FoodCards/FoodCard";
+import FoodCards from "../../assets/components/FoodCards/FoodCards";
 
 
 const Home = () => {
     return (
         <div>
-            <h2>this is home</h2>
+            <Banner></Banner>
+            <FoodCards></FoodCards>
         </div>
     );
 };
