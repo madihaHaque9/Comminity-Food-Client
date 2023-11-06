@@ -1,7 +1,15 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../../provider/AuthProvider";
+import Swal from "sweetalert2";
 
 
 const Login = () => {
+    const{googleSignIn}=useContext(AuthContext)
+    const handleGoogle=()=>{
+      googleSignIn().then(result=>console.log(result.user))
+    }
+    const {signIn}=useContext(AuthContext)
     const handleLogin=e=>{
         e.preventDefault();
        
@@ -10,6 +18,19 @@ const Login = () => {
         const password=form.password.value;
         const email=form.email.value;
         console.log(password,email)
+        signIn(email,password)
+        .then(result=>{
+            const user=result.user;
+            console.log(user)
+        })
+        .catch(error=>{
+            Swal.fire({
+                title: (error.message),
+                text: 'Do you want to continue',
+                icon: 'error',
+                confirmButtonText: 'Cool'
+              })
+        })
     }
     return (
         <div>
@@ -37,7 +58,7 @@ const Login = () => {
         </div>
         <div className="form-control mt-6">
           <button className="btn btn-warning">Login</button> <br />
-          <button className="btn btn-warning">Login with Google</button>
+          <button onClick={handleGoogle} className="btn btn-warning">Login with Google</button>
           <p>Don't have an account? </p><Link className="text-red-500 font-bold" to='/signup '>Register</Link>
         
         </div>

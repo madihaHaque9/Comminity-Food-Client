@@ -1,7 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../../provider/AuthProvider';
+import Swal from 'sweetalert2'
 
 const SignUp = () => {
+    const {createUser}=useContext(AuthContext);
+
     const handleSignUp=e=>{
         e.preventDefault();
        
@@ -12,6 +16,19 @@ const SignUp = () => {
         const name=form.name.value;
         const photo=form.photo.value
         console.log(password,email,name,photo)
+        createUser(email,password)
+        .then(result=>{
+            const user=result.user;
+            console.log(user)
+        })
+        .catch(error=>{
+            Swal.fire({
+                title: (error.message),
+                text: 'Do you want to continue',
+                icon: 'error',
+                confirmButtonText: 'Cool'
+              })
+        })
     }
     return (
         <div>
