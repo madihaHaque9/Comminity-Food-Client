@@ -4,7 +4,7 @@ const Banner = () => {
     return (
 //      
 <AnimatedPage>
-<div className="hero min-h-screen bg-green-400">
+<div className="hero min-h-screen bg-green-100">
   <div className="hero-content flex-col lg:flex-row-reverse ">
     <img src={banner} className="max-w-sm rounded-lg shadow-2xl" />
     <div className='flex-1'>
