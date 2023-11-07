@@ -1,8 +1,9 @@
+import { Link } from "react-router-dom";
 import AnimatedPage from "../../../AnimatedPage";
 
 
 const FoodCard = ({food}) => {
-    const{foodImage,foodName,donatorImage,donatorName,foodQuantity,pickupLocation,expiredDate,additionalNotes}=food
+    const{_id,foodImage,foodName,donatorImage,donatorName,foodQuantity,pickupLocation,expiredDate,additionalNotes}=food
     return (
         <AnimatedPage>
             <div className="card w-96 bg-amber-100 shadow-xl">
@@ -16,7 +17,7 @@ const FoodCard = ({food}) => {
     <p>Donator:{donatorName}</p>
     <p>{additionalNotes}</p>
     <div className="card-actions">
-      <button className="btn btn-warning">View Details</button>
+      <Link to={`/singleFood/${_id}`}><button className="btn btn-warning">View Details</button></Link>
     </div>
   </div>
 </div>

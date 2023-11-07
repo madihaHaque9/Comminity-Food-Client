@@ -1,6 +1,6 @@
 [
     {
-      "_id": "1",
+   
       "foodImage": "https://i.imgur.com/HhzeRRU.jpg",
       "foodName": "Cheeseburger",
       
@@ -13,7 +13,7 @@
       "additionalNotes": "Includes fries and ketchup."
     },
     {
-      "_id": "2",
+      
       "foodImage": "https://i.imgur.com/VzesOtm.jpg",
       "foodName": "Margherita Pizza",
 
@@ -26,7 +26,7 @@
       "additionalNotes": "Vegetarian option."
     },
     {
-      "_id": "3",
+   
       "foodImage": "https://i.imgur.com/VThXEZF.jpg",
       "foodName": "Caesar Salad",
    
@@ -39,7 +39,7 @@
       "additionalNotes": "Croutons and dressing included."
     },
     {
-      "_id": "4",
+    
       "foodImage": "https://i.imgur.com/1ExBSz6.jpg",
       "foodName": "Sushi Platter",
    
@@ -52,7 +52,7 @@
       "additionalNotes": "Freshly made with assorted sushi rolls."
     },
     {
-      "_id": "5",
+  
       "foodImage": "https://i.imgur.com/0ICGWm3.jpg",
       "foodName": "Pasta Carbonara",
      
@@ -65,7 +65,7 @@
       "additionalNotes": "Creamy sauce with bacon and parmesan."
     },
     {
-      "_id": "6",
+      
       "foodImage": "https://i.imgur.com/HRPup4M.jpg",
       "foodName": "Chocolate Brownie",
     

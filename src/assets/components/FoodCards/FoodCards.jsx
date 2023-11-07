@@ -5,7 +5,7 @@ import FoodCard from "./FoodCard";
 const FoodCards = ({food}) => {
     const [foods,setFoods]=useState([]);
     useEffect(()=>{
-        fetch('foods.json')
+        fetch('http://localhost:5000/foods')
         .then(res=>res.json())
         .then(data=>setFoods(data))
 
