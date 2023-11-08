@@ -4,6 +4,7 @@ import { AuthContext } from "../../../provider/AuthProvider";
 
 const AddFood = () => {
     const {user}= useContext(AuthContext)
+
     const handleAddFood=e=>{
          const form=e.target;
     const foodName=form.foodName.value;
@@ -27,9 +28,21 @@ const AddFood = () => {
         money
       }
       console.log(request)
-    }
+      fetch('http://localhost:5000/foods',{
+        method:"POST",
+        headers:{
+            'content-type':'application/json'
+        },
+        body:JSON.stringify(request)
+    })
+    .then(res=>res.json())
+    .then(data=>{
+        console.log(data)
+    })
   
-      console.
+    }
+   
+      
     return (
         <div className="hero  bg-base-200">
   <div className="hero-content ">
@@ -40,26 +53,26 @@ const AddFood = () => {
           <label className="label">
             <span className="label-text">Food Name</span>
           </label>
-          <input type="text" name='foodName' defaultValue={foodName} className="input input-bordered" required readOnly />
+          <input type="text" name='foodName'className="input input-bordered" required />
         </div>
         <div className="form-control">
           <label className="label">
             <span className="label-text">Food Image URL</span>
           </label>
-          <input name='foodImage' type="text" defaultValue={foodImage}className="input input-bordered" required readOnly />
+          <input name='foodImage' type="text" className="input input-bordered" required  />
          
         </div>
         <div className="form-control">
           <label className="label">
             <span className="label-text">Donator Name</span>
           </label>
-          <input type="text" name='donatorName' defaultValue={donatorName} className="input input-bordered" required readOnly />
+          <input type="text" name='donatorName'  className="input input-bordered" required  />
         </div>
         <div className="form-control">
           <label className="label">
-            <span className="label-text">Request date:</span>
+            <span className="label-text">Expired date:</span>
           </label>
-          <input type="date" name='date' defaultValue={expiredDate}className="input input-bordered" required  />
+          <input type="date" name='date'className="input input-bordered" required  />
          
         </div>
         <div className="form-control">
@@ -72,27 +85,27 @@ const AddFood = () => {
           <label className="label">
             <span className="label-text">Additional Notes:</span>
           </label>
-          <input type="text" name='notes' defaultValue={additionalNotes} className="input input-bordered" required />
+          <input type="text" name='notes' className="input input-bordered" required />
          
         </div>
         <div className="form-control">
           <label className="label">
             <span className="label-text">Pickup Location:</span>
           </label>
-          <input name='location' type="text" defaultValue={pickupLocation} className="input input-bordered" required readOnly />
+          <input name='location' type="text"  className="input input-bordered" required  />
         </div>
         <div className="form-control">
           <label className="label">
             <span className="label-text">Food Id:</span>
           </label>
-          <input name='id' type="text" defaultValue={_id} className="input input-bordered" required readOnly/>
+          <input name='id' type="text"className="input input-bordered" required />
          
         </div>
         <div className="form-control">
           <label className="label">
             <span className="label-text">Email</span>
           </label>
-          <input type="email" name='email' placeholder="email" className="input input-bordered" required defaultValue={user?.email} />
+          <input type="email" name='email' defaultValue={user?.email}className="input input-bordered" required  />
         </div>
         
         <div className="form-control mt-6">

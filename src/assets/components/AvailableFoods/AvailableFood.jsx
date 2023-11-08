@@ -17,6 +17,7 @@ const AvailableFood = ({food}) => {
     <div className="card-actions">
       <Link to={`/singleFood/${_id}`}><button className="btn btn-warning">View Details</button></Link>
     </div>
+   
   </div>
 </div>
     );
