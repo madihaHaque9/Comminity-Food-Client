@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const ManageFoodRow = ({request,handleDelete}) => {
@@ -32,7 +33,7 @@ const ManageFoodRow = ({request,handleDelete}) => {
         <td>{donatorName}</td>
         <td>${money}</td>
         <th>
-          <button className="btn btn-ghost btn-xs">details</button>
+          <Link to='/manageFood/manage'><button className="btn btn-ghost btn-xs">Manage</button></Link>
         </th>
       </tr>
        
