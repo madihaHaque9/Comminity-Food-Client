@@ -83,9 +83,10 @@
 // };   
 
 // export default RequestFood;
-import React, { useContext } from 'react';
+import  { useContext } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../provider/AuthProvider';
+import Swal from 'sweetalert2';
 
 const RequestFood = () => {
   const {user}= useContext(AuthContext)
@@ -116,10 +117,24 @@ const RequestFood = () => {
       money
     }
     console.log(request)
-    fetch('')
+    fetch('http://localhost:5000/request',{
+      method:"POST",
+      headers:{
+         'content-type':'application/json'
+      },
+      body:JSON.stringify(request)
+    })
     .then(res=>res.json())
     .then(data=>{
       console.log(data)
+      if(data.insertedId){
+        Swal.fire({
+          title: 'Request has done successfully',
+          text: 'Do you want to continue',
+          icon: 'success',
+          confirmButtonText: 'Cool'
+        })
+      }
     })
 
 
@@ -175,7 +190,7 @@ const RequestFood = () => {
           <label className="label">
             <span className="label-text">Pickup Location:</span>
           </label>
-          <input name='location' type="text" placeholder={pickupLocation}className="input input-bordered" required readOnly />
+          <input name='location' type="text" defaultValue={pickupLocation} className="input input-bordered" required readOnly />
         </div>
         <div className="form-control">
           <label className="label">
