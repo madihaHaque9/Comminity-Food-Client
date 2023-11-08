@@ -9,6 +9,7 @@ import ManageFood from "../assets/components/ManageFood/ManageFood";
 import PrivateRoute from "../provider/PrivateRoute";
 import Manage from "../assets/components/ManageFood/Manage";
 import AvailableFoods from "../assets/components/AvailableFoods/AvailableFoods";
+import AddFood from "../assets/components/AddFood/AddFood";
 
 const router = createBrowserRouter([
     {
@@ -45,6 +46,9 @@ const router = createBrowserRouter([
         },{
           path:'/availableFoods',
           element:<PrivateRoute><AvailableFoods></AvailableFoods></PrivateRoute>
+        },{
+          path:'/addFood',
+          element:<AddFood></AddFood>
         }
       ]
     },
