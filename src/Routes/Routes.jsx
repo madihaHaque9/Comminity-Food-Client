@@ -30,11 +30,11 @@ const router = createBrowserRouter([
         },{
           path:'singleFood/:id',
           element:<SingleFood></SingleFood>,
-          loader:({params})=>fetch(`http://localhost:5000/foods/${params.id}`)
+          loader:({params})=>fetch(`https://food-server-5bfggg8sy-madiha-haques-projects.vercel.app/foods/${params.id}`)
         },{
           path:'request/:id',
           element:<RequestFood  ></RequestFood>,
-          loader:({ params }) => fetch(`http://localhost:5000/foods/${params.id}`)
+          loader:({ params }) => fetch(`https://food-server-5bfggg8sy-madiha-haques-projects.vercel.app/foods/${params.id}`)
         },{
           path:'manageFood',
           element:<PrivateRoute><ManageFood></ManageFood></PrivateRoute>
