@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 
 
 const SingleFood = () => {
@@ -15,7 +15,7 @@ const SingleFood = () => {
     <p>Expired Date:{expiredDate}</p>
     <p>Donator:{donatorName}</p>
     <p>Location:{pickupLocation}</p>
-    <button className="btn btn-warning">Request</button>
+    <Link to={`/request/${food._id}`}><button className="btn btn-warning">Request</button></Link>
     
   
   </div>
