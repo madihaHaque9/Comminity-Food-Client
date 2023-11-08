@@ -1,14 +1,38 @@
 
 import { Link } from 'react-router-dom';
 import logo from '../Navbar/logo-fotor-bg-remover-2023110523123.png'
+import { useContext } from 'react';
+import { AuthContext } from '../../provider/AuthProvider';
+import Swal from 'sweetalert2';
 const Navbar = () => {
+  const {user,logOut}=useContext(AuthContext);
+  const handleLogOut=()=>{
+    logOut()
+    .then(()=>{})
+    .catch(error=>{
+      Swal.fire({
+        title: 'Error!'(error.message),
+        text: 'Do you want to continue',
+        icon: 'error',
+        confirmButtonText: 'Cool'
+      })
+    })
+
+  }
+
     const navItems=<>
     <li><Link to='/'>Home</Link></li>
     <li><Link to='/availableFoods'>Available Foods</Link></li>
     <li><Link to='/addFood'>Add Food</Link></li>
-    <li><Link to='/manageFood'>Manage My Food</Link></li>
+    
     <li><Link to='/foodRequest'>My Food Request</Link></li>
-    <li><Link to='/login'>Login</Link></li>
+    {
+      user?.email? <>
+      <li><Link to='/manageFood'>Manage My Food</Link></li>
+       <li><button onClick={handleLogOut} to='/logout'>Logout</button></li></>: <li><Link to='/login'>Login</Link></li>
+    }
+    
+   
    
     </>
     return (

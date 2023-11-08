@@ -5,6 +5,8 @@ import Login from "../assets/components/Login/Login";
 import SignUp from "../assets/components/SignUp/SignUp";
 import SingleFood from "../pages/SingleFood/SingleFood";
 import RequestFood from "../pages/RequestFood/RequestFood";
+import ManageFood from "../assets/components/ManageFood/ManageFood";
+import PrivateRoute from "../provider/PrivateRoute";
 
 const router = createBrowserRouter([
     {
@@ -30,6 +32,10 @@ const router = createBrowserRouter([
           path:'request/:id',
           element:<RequestFood  ></RequestFood>,
           loader:({ params }) => fetch(`http://localhost:5000/foods/${params.id}`)
+        },{
+          path:'manageFood',
+          element:<PrivateRoute><ManageFood></ManageFood></PrivateRoute>
+
         }
       ]
     },
