@@ -10,6 +10,7 @@ import PrivateRoute from "../provider/PrivateRoute";
 import Manage from "../assets/components/ManageFood/Manage";
 import AvailableFoods from "../assets/components/AvailableFoods/AvailableFoods";
 import AddFood from "../assets/components/AddFood/AddFood";
+import UpdateFood from "../assets/components/UpdateFood/UpdateFood";
 
 const router = createBrowserRouter([
     {
@@ -30,11 +31,11 @@ const router = createBrowserRouter([
         },{
           path:'singleFood/:id',
           element:<SingleFood></SingleFood>,
-          loader:({params})=>fetch(`https://food-server-5bfggg8sy-madiha-haques-projects.vercel.app/foods/${params.id}`)
+          loader:({params})=>fetch(`https://food-server-one-indol.vercel.app/foods/${params.id}`)
         },{
           path:'request/:id',
           element:<RequestFood  ></RequestFood>,
-          loader:({ params }) => fetch(`https://food-server-5bfggg8sy-madiha-haques-projects.vercel.app/foods/${params.id}`)
+          loader:({ params }) => fetch(`https://food-server-one-indol.vercel.app/foods/${params.id}`)
         },{
           path:'manageFood',
           element:<PrivateRoute><ManageFood></ManageFood></PrivateRoute>
@@ -48,7 +49,12 @@ const router = createBrowserRouter([
           element:<PrivateRoute><AvailableFoods></AvailableFoods></PrivateRoute>
         },{
           path:'/addFood',
-          element:<AddFood></AddFood>
+          element:<PrivateRoute><AddFood></AddFood></PrivateRoute>
+        },{
+          path:'/updateFood/:id',
+        element:<PrivateRoute><UpdateFood></UpdateFood></PrivateRoute>,
+        loader:({params})=>fetch(`https://food-server-one-indol.vercel.app/foods/${params.id}`)
+
         }
       ]
     },

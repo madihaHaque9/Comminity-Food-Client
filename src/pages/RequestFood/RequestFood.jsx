@@ -33,7 +33,7 @@ const RequestFood = () => {
       money
     }
     console.log(request)
-    fetch('https://food-server-5bfggg8sy-madiha-haques-projects.vercel.app/request',{
+    fetch('https://food-server-one-indol.vercel.app/request',{
       method:"POST",
       headers:{
          'content-type':'application/json'

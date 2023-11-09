@@ -5,7 +5,7 @@ import AnimatedPage from "../../../AnimatedPage";
 const FoodCard = ({food}) => {
     const{_id,foodImage,foodName,donatorImage,donatorName,foodQuantity,pickupLocation,expiredDate,additionalNotes}=food
     return (
-        <AnimatedPage>
+        
             <div className="card w-96 bg-amber-100 shadow-xl">
   <figure className="px-10 pt-10">
     <img src={foodImage} alt="Shoes" className="rounded-xl" />
@@ -18,10 +18,12 @@ const FoodCard = ({food}) => {
     <p>{additionalNotes}</p>
     <div className="card-actions">
       <Link to={`/singleFood/${_id}`}><button className="btn btn-warning">View Details</button></Link>
+      <Link to={`/updateFood/${_id}`}><button className=" btn btn-primary">
+        Update</button></Link>
     </div>
   </div>
 </div>
-        </AnimatedPage>
+       
     );
 };
 

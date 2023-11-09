@@ -7,7 +7,7 @@ import Swal from "sweetalert2";
 const ManageFood = () => {
     const {user}=useContext(AuthContext);
     const [requests,setRequest]=useState([])
-    const url=`https://food-server-5bfggg8sy-madiha-haques-projects.vercel.app/request?email=${user?.email}`;
+    const url=`https://food-server-one-indol.vercel.app/request?email=${user?.email}`;
     useEffect(()=>{
         fetch(url)
         .then(res=>res.json())
@@ -21,7 +21,7 @@ const ManageFood = () => {
             confirmButtonText: 'Cool'
           })
         if(proceed){
-          fetch(`https://food-server-5bfggg8sy-madiha-haques-projects.vercel.app/request/${id}`,{
+          fetch(`https://food-server-one-indol.vercel.app/request/${id}`,{
             method:"DELETE",
   
           })
